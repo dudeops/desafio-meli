@@ -2,7 +2,7 @@
 
 Sobre o script :
 
-O script solicita o nome do arquivo para a interação e do bucket, em seguida valida a existência do aqruivo e sendo atendido a condição, executa a rotina de upload/download para uma unidade S3, abaixo o descritivo de cada script em ação:
+O script solicita o nome do arquivo para a interação do arquivo e do bucket, em seguida valida a existência desse aqruivo e sendo atendido a condição, executa a rotina de upload/download para uma unidade S3, abaixo o descritivo de cada script em ação:
 
 O Arquivo Upload-s3.sh
 
