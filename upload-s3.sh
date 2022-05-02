@@ -1,19 +1,22 @@
 #!/bin/sh
 
 read -p "Informe o nome completo do arquivo (com o .extensão) " file
+read -p "Informe o nome do bucket (por exemplo s3://Desafio-meli/nome do bucket/)" bucket
 
 # Arquivo de saída para o log
 LOGFILE="./log/desafio-meli.log"
 
 #Valida se o arquivo existe
-if [ -f "$file" ]
+    if [ -f "$file" ]
 
 #Se o arquvio existir, continuamos
 then
     echo "Encontrei o seu arquivo ;]"
-    echo "Iniciando a copia do arquivo para o bucket =] "
-    aws s3 cp ./$file s3://desafio-meli/arquivos-utilitarios/  
+    echo "Iniciando a copia do arquivo para o bucket =], logo em seguida você poderá vizualizar no Fury também "
+        aws s3 cp ./$file s3://desafio-meli/$bucket/ 
+        aws s3 sync s3://desafio-meli/$bucket/   /servidor Fury
+        
     echo "Upload do arquivo " $file " executado com sucesso " $(date) >> $LOGFILE
 else
-        echo "Não consegui encontrar o arquivo " $file " =´[ " $(date) >> $LOGFILE
+    echo "Não consegui encontrar o arquivo " $file " =´[ " $(date) >> $LOGFILE
 fi
