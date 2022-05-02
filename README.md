@@ -6,12 +6,12 @@ O script solicita o nome do arquivo para a interação e do bucket, em seguida v
 
 O Arquivo Upload-s3.sh
 
-			Estação > Bucket > Servidor Fury
+							Estação > Bucket > Servidor Fury
 
 
 O Arquivo download-s3.sh
 
-			Servidor Fury > Bucket > Estação
+							Servidor Fury > Bucket > Estação
 
 
 As ações de sucesso ou falha são registradas através de um arquivo de log que pode ser encontrado no diretório ./log.
