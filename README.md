@@ -22,3 +22,19 @@ Partindo da premissa de um conhemineto prévio nas ferramentas S3 e IAM da AWS
 - A criação de um bucket na AWS.
 - A criação de um usuário no IAM com permissão para acesso ao bucket.
 - CLI da AWS instalado em um WSL usando o Ubuntu para a execução do script.
+
+
+
+
+Modo de uso:
+
+Copiar o script para a estação/servidor.
+
+Para melhor utiização do script, execute-o dentro do diretório no qual você queira movimentar os arquivos.
+
+Linux : 
+Comando para a execução do script ./script.sh
+
+Windows: 
+Para a execução em ambiente Microsoft Windows, será necessário a instalação do WSL (https://docs.microsoft.com/pt-br/windows/wsl/install). Comando para a execução do script ./script.sh
+
