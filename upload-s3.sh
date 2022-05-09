@@ -11,12 +11,15 @@ LOGFILE="./log/desafio-meli.log"
 
 #Se o arquvio existir, continuamos
 then
-    echo "Encontrei o seu arquivo ;]"
-    echo "Iniciando a copia do arquivo para o bucket =], logo em seguida você poderá vizualizar no Fury também "
+        echo "Encontrei o seu arquivo ;]"
+        echo "Iniciando a copia do arquivo para o bucket =] "
+
         aws s3 cp ./$file s3://desafio-meli/$bucket/ 
-        aws s3 sync s3://desafio-meli/$bucket/   /servidor Fury
+        aws s3 sync s3://desafio-meli/$bucket/  
         
     echo "Upload do arquivo " $file " executado com sucesso " $(date) >> $LOGFILE
-else
+
+#Se o arquivo não existir, mostra a mensagem abaixo.
+else    
     echo "Não consegui encontrar o arquivo " $file " =´[ " $(date) >> $LOGFILE
 fi
